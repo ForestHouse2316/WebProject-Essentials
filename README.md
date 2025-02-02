@@ -21,3 +21,13 @@ But **don't forget you are using that CSS file if you apply it.** ⚠️
 - Set git remote url. `git remote add origin URL`
 - Change local branch name to `main` (`master` is the default name)
 - Push forcibly to origin\main branch to clean git history. `git push origin main -f`
+- To open `index.html` in non-server environment like windows, add `publicPath: ""` in `vue.config.js`:
+```js
+module.exports = {
+  publicPath: "", // add
+};
+// OR ---------------------
+module.exports = defineConfig({
+    publicPath: "", // add
+});
+```
